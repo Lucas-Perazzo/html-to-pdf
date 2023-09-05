@@ -1,0 +1,128 @@
+{
+    "cabeza": [
+        [
+            {
+                "outputParameters": {},
+                "resultSets": [
+                    [
+                        {
+                            "Filas afectadas": 1
+                        }
+                    ],
+                    [
+                        {
+                            "Filas afectadas": 1
+                        }
+                    ],
+                    [
+                        {
+                            "Filas afectadas": 1
+                        }
+                    ],
+                    [
+                        {
+                            "Filas afectadas": 1
+                        }
+                    ],
+                    [
+                        {
+                            "total": 6995.5,
+                            "tele": "Tel.\/Fax: 5239-6400",
+                            "cuit": "30-65485516-8",
+                            "baja_fecha": null,
+                            "domi": "Arenales 1826 Piso 3  (1114) Capital Federal",
+                            "es_inscrip": "S",
+                            "cae": null,
+                            "vto_cae": null,
+                            "vto_cai": null,
+                            "deno": "Responsable Inscripto",
+                            "ente_cuit": "30654855168",
+                            "cai": null,
+                            "condi_venta": "30 Días fecha de recepción",
+                            "grupo": 58,
+                            "fecha": 1682699880000,
+                            "inicio": 967777200000,
+                            "prepaga": 2,
+                            "nombre_abre": "FINAMED S.A.",
+                            "cod_barra": null,
+                            "ape_razon": "Hospital Italiano de Mendoza",
+                            "compro_tipo": "ND",
+                            "pie_compro1": "Swiss Medical S.A. - TE 5239-6400                                                                      CAI-25020103597723",
+                            "grava": 0.0,
+                            "compro_asoc": null,
+                            "obser_nota_deb": "No corresponde percepción de Iva por ser agentes incluidos en el anexo I de la Res. 18 (AFIP)",
+                            "ente": 1,
+                            "prestad": 81301,
+                            "iva_ins": 0.0,
+                            "compro_nro": "X814100130546  ",
+                            "exen": 6995.5,
+                            "tipo": "I",
+                            "lugar": "BUENOS AIRES,",
+                            "cuit_prestad": "30708411600  ",
+                            "ingbru": "CM 901-045700-4"
+                        }
+                    ]
+                ]
+            }
+        ]
+    ],
+    "detalle": [
+        {
+            "duracion": 292,
+            "ejecuciones": [
+                {
+                    "outputParameters": {},
+                    "resultSets": [
+                        [
+                            {
+                                "Filas afectadas": 1
+                            }
+                        ],
+                        [
+                            {
+                                "Filas afectadas": 0
+                            }
+                        ],
+                        [
+                            {
+                                "Filas afectadas": 1
+                            }
+                        ],
+                        [
+                            {
+                                "Filas afectadas": 0
+                            }
+                        ],
+                        [
+                            {
+                                "Filas afectadas": 0
+                            }
+                        ],
+                        [
+                            {
+                                "Filas afectadas": 0
+                            }
+                        ],
+                        [
+                            {
+                                "Filas afectadas": 0
+                            }
+                        ],
+                        [
+                            {
+                                "Filas afectadas": 0
+                            }
+                        ],
+                        [
+                            {
+                                "total": 6995.5,
+                                "compro": "S\/FC A00011-00003894     ",
+                                "deta": "Segun detalle adjunto (prestac.ambulatorio)                 "
+                            }
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

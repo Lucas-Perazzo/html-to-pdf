@@ -1,0 +1,65 @@
+{
+    "duracion": 5,
+    "ejecuciones": [
+        {
+            "outputParameters": {},
+            "resultSets": [
+                [
+                    {
+                        "Filas afectadas": 1
+                    }
+                ],
+                [
+                    {
+                        "total": -45958.25,
+                        "obser": null,
+                        "inter_debcal": 0.0,
+                        "revi_fecha": 1679454000000,
+                        "recep_fecha": 1679454000000,
+                        "perio": 1677639600000,
+                        "iva_deb": 0.0,
+                        "carga_fecha": 1679454000000,
+                        "liqui_fecha": 1680052620000,
+                        "total_debito": 0.0,
+                        "exten_deno": "SWISS MEDICAL S.A.",
+                        "ivacal": 0.0,
+                        "debi_moti": "ajuste",
+                        "deno": "Oficina Central",
+                        "aso_compro_nro": "A0001100000797 ",
+                        "totcal": 0.0,
+                        "debcal": 0.0,
+                        "ambu_total": 0.0,
+                        "total_copago": 0.0,
+                        "grupo": 58,
+                        "fecha": 1679022000000,
+                        "inter_total": 0.0,
+                        "nombre_abre": "FINAMED S.A.",
+                        "prepaga": 2,
+                        "ape_razon": "Hospital Italiano de Mendoza",
+                        "perce": 0.0,
+                        "compro_tipo": "CE",
+                        "inter_ivacal": 0.0,
+                        "super_fecha": 1679886000000,
+                        "total_impuesto": 0.0,
+                        "tipo_centro": "002       ",
+                        "aso_compro_tipo": "FE",
+                        "grava": 0.0,
+                        "total_bruto": -45958.25,
+                        "debito": 0.0,
+                        "item_nro": -1,
+                        "prestad": 81301,
+                        "compro_nro": "A0001100000537 ",
+                        "iva_ins": 0.0,
+                        "iibb": 0.0,
+                        "tipo": "I",
+                        "exen": -45958.25,
+                        "centro": "9ClinS00  ",
+                        "neto_a_pagar": -45958.25,
+                        "entrada": "O"
+                    }
+                ],
+                []
+            ]
+        }
+    ]
+}

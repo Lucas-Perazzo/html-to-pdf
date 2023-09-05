@@ -1,0 +1,38 @@
+{
+    "duracion": 5,
+    "ejecuciones": [
+        {
+            "outputParameters": {
+                "ivacal": null,
+                "total_gravado": null,
+                "totcal": null,
+                "total_exento": null
+            },
+            "resultSets": [
+                [
+                    {
+                        "Filas afectadas": 1
+                    }
+                ],
+                [
+                    {
+                        "total": null,
+                        "iva": 0.0,
+                        "Exento": null,
+                        "Gravado": 0.0
+                    }
+                ],
+                [
+                    {
+                        "Filas afectadas": 1
+                    }
+                ],
+                [
+                    {
+                        "Filas afectadas": 1
+                    }
+                ]
+            ]
+        }
+    ]
+}

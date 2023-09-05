@@ -1,0 +1,28 @@
+{
+    "duracion": 343,
+    "ejecuciones": [
+        {
+            "outputParameters": {},
+            "resultSets": [
+                [
+                    {
+                        "Filas afectadas": 1
+                    }
+                ],
+                [
+                    {
+                        "total_copago": 0.0,
+                        "total_debito": 0.0,
+                        "inter_debcal": 0.0,
+                        "debito_copago": 0.0,
+                        "debi_moti": "ajuste",
+                        "debito_percep_iva": 0.0,
+                        "debcal": 0.0,
+                        "iva_deb": 0.0,
+                        "debito": 0.0
+                    }
+                ]
+            ]
+        }
+    ]
+}
