@@ -17,6 +17,8 @@ import com.vinzscam.reactnativefileviewer.RNFileViewerPackage;
 import com.rnfs.RNFSPackage;
 // react-native-html-to-pdf
 import com.christopherdro.htmltopdf.RNHTMLtoPDFPackage;
+// rn-fetch-blob
+import com.RNFetchBlob.RNFetchBlobPackage;
 
 public class PackageList {
   private Application application;
@@ -64,7 +66,8 @@ public class PackageList {
       new MainReactPackage(mConfig),
       new RNFileViewerPackage(),
       new RNFSPackage(),
-      new RNHTMLtoPDFPackage()
+      new RNHTMLtoPDFPackage(),
+      new RNFetchBlobPackage()
     ));
   }
 }

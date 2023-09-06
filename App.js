@@ -1,19 +1,41 @@
-import { Alert, Button, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { Alert, Button, PermissionsAndroid, Platform, StyleSheet, Text, View } from 'react-native'
+import React, { useState } from 'react'
 import reactNativeHTMlToPdf from 'react-native-html-to-pdf';
 import FileViewer from 'react-native-file-viewer';
 import Data from './json/debitoFC03894.json'
+import RNFetchBlob from 'rn-fetch-blob';
 import moment from 'moment';
 const formatDate = (date) => moment(date).format('DD/MM/YYYY');
 
 const App = () => {
+  const [filePath, setFilePath] = useState('');
+
+  const isPermited = async () => {
+    if (Platform.OS === 'android') {
+      try {
+        const granted = await PermissionsAndroid.request(
+          PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
+          {
+            title: 'External Storage Write Permission',
+            message: 'App needs permission',
+          },
+        );
+        return granted === PermissionsAndroid.RESULTS.GRANTED;
+      } catch (err) {
+        Alert.alert('Write permission err', err)
+        return false;
+      }
+    } else {
+      return true;
+    }
+  };
 
   const html = (x) => {
     const styledeb = ['hola', 'chau', 'no se', 'ok']
 
     const ResultSets = Data.cabeza[0][0].resultSets[4];
     const Detalle = Data.detalle[0].ejecuciones[0].resultSets[8];
-    
+
     const renderResults = () => {
       const ape_razon = ResultSets[0].ape_razon;
       const obser_nota_deb = ResultSets[0].obser_nota_deb;
@@ -55,29 +77,34 @@ const App = () => {
                 <div>${renderResults()}</div>
             </div>`
 
-  }
+  };
   //                <img class="img" src="https://i.pinimg.com/originals/ba/ea/9a/baea9a48805a03f020ba5230438a853a.jpg" alt="swiss"/>
 
   const generatePdf = async () => {
-    const text = "hola"
-    const options = {
-      html: html(text),
-      fileName: "test",
-      directory: "Downloads"
-    }
-    const file = await reactNativeHTMlToPdf.convert(options);
+      const text = "hola"
+      const options = {
+        html: html(text),
+        fileName: "test",
+        directory: "Documents",
+        base64: true,
+      }
+      const file = await reactNativeHTMlToPdf.convert(options);
+      console.log(file);
+      let filePath = RNFetchBlob.fs.dirs.DownloadDir + '/test3PDF.pdf';
+      console.log(RNFetchBlob.fs.dirs.DownloadDir);
 
-    console.log(file);
-    Alert.alert('Succ Export', 'Path:' + file.filePath, [
-      { text: 'Cancel', style: 'cancel' },
-      { text: 'Open', onPress: () => openFile(file.filePath) }
-    ], { cancelable: true });
-  };
+      RNFetchBlob.fs.writeFile(filePath, file.base64, 'base64')
+        .then(response => {
+          console.log('Success: ', response);
+        })
+        .catch(errors => {
+          console.log('Error: ', errors);
+        })
 
-  const openFile = (filepath) => {
-    const path = filepath;
-    FileViewer.open(path);
-  };
+      console.log(file.filePath);
+      setFilePath(file.filePath);
+      console.log(filePath);
+    };
 
   return (
     <View style={styles.flex}>
@@ -87,8 +114,7 @@ const App = () => {
       </View>
     </View>
   )
-}
-
+};
 export default App
 
 const styles = StyleSheet.create({
