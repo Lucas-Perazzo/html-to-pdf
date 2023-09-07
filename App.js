@@ -80,6 +80,7 @@ const App = () => {
   };
   //                <img class="img" src="https://i.pinimg.com/originals/ba/ea/9a/baea9a48805a03f020ba5230438a853a.jpg" alt="swiss"/>
 
+
   const generatePdf = async () => {
       const text = "hola"
       const options = {
@@ -95,7 +96,7 @@ const App = () => {
 
       RNFetchBlob.fs.writeFile(filePath, file.base64, 'base64')
         .then(response => {
-          console.log('Success: ', response);
+          console.log('Success: ', JSON.stringify(response));
         })
         .catch(errors => {
           console.log('Error: ', errors);
@@ -104,6 +105,12 @@ const App = () => {
       console.log(file.filePath);
       setFilePath(file.filePath);
       console.log(filePath);
+      
+      Alert.alert('', '' + filePath, [
+        {text: 'Cancel', style: 'destructive'},
+        {text: 'Open', onPress: () => FileViewer.open(filePath)}
+      ], {cancelable: true});
+      
     };
 
   return (
